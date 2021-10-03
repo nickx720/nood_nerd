@@ -1,16 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<meta charset="utf-8">
-	<title>Noob & Nerd </title>
-	 <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" rel="stylesheet" />
-	 <link href="{{ get_url(path="main.css", trailing_slash=false)}}" rel="stylesheet" />
-</head>
-<body>
-	<section class="section">
+	<head>
+		<meta charset="utf-8">
+		<title>Noob & Nerd </title>
+		<link href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" rel="stylesheet" />
+		<link href="{{ get_url(path="main.css", trailing_slash=false)}}" rel="stylesheet" />
+	</head>
+	<body>
 		<div class="container">
-			{% block content %} {% endblock %}
+			<nav class="navbar" role="navigation" aria-label="main navigation">
+				<div class="navbar-brand">
+					<a class="navbar-item" href="/">
+						<img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: Free, open source, and modern CSS framework based on Flexbox" width="112" height="28">
+					</a>
+
+					<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</a>
+				</div>
+				<div class="navbar-menu">
+					<div class="navbar-start">
+						<a class="navbar-item" href="/blog/">Blog</a>
+					</div>
+				</div>
+			</nav>
+			<section class="section">
+				<div class="container">
+					{% block content %} {% endblock %}
+				</div>
+			</section>
 		</div>
-	</section>
-</body>
+		<footer class="footer">
+			<div class="content has-text-centered">
+				<p>
+					<strong>Nerd & Noob developed</strong> by <a href="https://www.nickasync.codes/" target="_blank">Nick Tom Thomas</a> using Zola </p>
+			</div>
+		</footer>
+	</body>
